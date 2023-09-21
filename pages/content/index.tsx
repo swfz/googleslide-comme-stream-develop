@@ -1,6 +1,15 @@
 import type { NextPage } from 'next';
+import { useState, useEffect } from 'react'
 
 const Content: NextPage = () => {
+  const [number, setNumber] = useState<number>(0)
+  const bc = new BroadcastChannel('slide-page');
+  bc.onmessage = (ev) => {
+    setNumber(ev.data.number)
+  }
+
+  useEffect(() => {
+  })
 
   return(
     <div className='punch-viewer-content'>
@@ -14,6 +23,7 @@ const Content: NextPage = () => {
           </div>
         </div>
       </div>
+      <div className="docs-material-menu-button-flat-default-caption">{number}</div>
     </div>
   )
 }

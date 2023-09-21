@@ -13,10 +13,13 @@ const Home: NextPage = () => {
 
       <ul>
         <li>
-          <Link href="/usertool">Usertool</Link>
+          <Link href="/presenter">Presenter</Link>
         </li>
         <li>
           <Link href="/slide">Slide</Link>
+        </li>
+        <li>
+          <Link href="/usertool">Usertool</Link>
         </li>
       </ul>
     </div>
